@@ -13,5 +13,6 @@ module.exports = class UpdateEmitter extends EventEmitter
     @queue.push message
 
   dispense: ->
+    return unless @queue.length
     @emit "updates" @queue.slice!
     @queue.length = 0
