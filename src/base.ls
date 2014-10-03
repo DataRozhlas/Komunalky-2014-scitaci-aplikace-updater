@@ -24,6 +24,7 @@ sendKeepAlive = ->
 
 setInterval sendKeepAlive, 30000
 server = http.createServer (req, res) ->
+  console.log "Normal request, shouldn't happen"
   res.writeHead do
     * 200
     * "OK"
