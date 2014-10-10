@@ -17,7 +17,7 @@ module.exports.serialize = (input) ->
     if id == -1
       null
     else
-      String.fromCharCode id + 10
+      String.fromCharCode id + 20
 
 serializeJson = (data) ->
   json = JSON.stringify data

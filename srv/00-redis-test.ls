@@ -14,5 +14,6 @@ mrdat = ->
   console.log obce[obec]
   redisClient.publish "update", obce[obec]
 
-setInterval mrdat, 250
+# setInterval mrdat, 250
+redisClient.publish "update", "500208"
 setTimeout process.exit, 5000
